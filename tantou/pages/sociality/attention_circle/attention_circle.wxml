@@ -1,0 +1,33 @@
+<!--pages/sociality/attention_circle/attention_circle.wxml-->
+<view class='whole'>
+  <view class='Information flex' wx:for="{{datas}}" wx:key="*this">
+    <view class='Head_portrait flex'>
+       <image src='{{item.headpic}}' catchtap='jump_homepage' data-uid='{{item.user_id}}' ></image>
+       <view class='name' data-uid='{{item.user_id}}' catchtap='jump_homepage'>{{item.nickname}}</view>
+       <view class='time'>{{item.add_time}}</view>
+    </view>
+    <view class='picture' bindtap='look_up'  data-information='{{item}}'>
+      <image src='{{item.img_url}}'></image>
+    </view>
+     <view class="comment_box">
+      <!-- 选项框开始 -->
+      <view class="Grid">
+        <view class="Grid-cell " data-uid='{{item.display_id}}' id="{{index}}" bindtap='praise'>
+        <image wx:if="{{item.thumbuped==0}}" src='../../sociality/image/dianzan.png' />
+        <image wx:if="{{item.thumbuped==1}}"  src='../../sociality/image/dianzanz.png' />
+          <text>{{item.zan_num}}</text>
+        </view>
+        <view class="Grid-cell borber" bindtap='look_up'  data-information='{{item}}' >
+         <image src='../../sociality/image/pinglun.png' />
+          <text>{{item.comment_num}}</text>
+        </view>
+        <view class="Grid-cell borber">
+           <image src='../../sociality/image/fenxiangs.png' />
+            <button class='Features forbutton' open-type="share" data-uid='{{item}}'
+             >分享</button>
+        </view>
+      </view>
+    </view>
+     <!-- 选项框结束 -->
+  </view>
+</view>

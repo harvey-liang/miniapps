@@ -1,0 +1,10 @@
+<!--pages/navigation/navigation.wxml-->
+<view class='whole'>
+ <template name="navigation">   
+  <view class="navbar flex">
+    <view wx:for="{{navbar}}" data-idx="{{index}}" class="flex item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">
+    <image class="icon" wx:if="{{item}}" src="{{item}}" />
+    </view>
+  </view>
+</template> 
+</view>

@@ -1,0 +1,217 @@
+/* pages/personal/personals/personals.wxss */
+@import "../../navigation/navigation.wxss";
+.wholes{
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+.popup{
+  position: absolute;
+  background-color: #000000;
+  width: 100%;
+  height: 90%;
+  z-index: 10000;
+   background-size: 100% 100%;
+   background: url(http://owkgytr8g.bkt.clouddn.com/image/jpg/x.png)no-repeat; 
+}
+.prompt{
+   width: 500rpx;
+   height: 300rpx;
+   background-color: #ffffff;
+   display: flex;
+   flex-direction: column;
+   border-radius: 25rpx 25rpx 25rpx 25rpx;
+   overflow: hidden;
+}
+.choice{
+  display: flex;
+   flex-direction: row;
+}
+.cancel{
+  background-color: #ffffff;
+  flex-grow: 1;
+}
+.confirm{
+   background-color: #ffffff;
+   flex-grow: 1;
+}
+.top_box{
+ width: 100%;
+ height: 300rpx;
+ background: url(http://owkgytr8g.bkt.clouddn.com/image/jpg/beijing.jpg)no-repeat;
+ background-size: 100% 300rpx;
+ color: #ffffff;
+}
+.avatar_box{
+   width: 100%;
+  height: 140rpx;
+  
+}
+.head_portrait{
+  margin-top: 48rpx;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50% 50%;
+}
+.nickname{
+   margin-top: 80rpx;
+   font-size: 36rpx;
+   color: #ffffff;
+}
+.options_box{
+   width: 100%;
+  height: 240rpx;
+  background-color: #ffffff;
+}
+.options{
+  width: 96%;
+  height: 144rpx;
+  top:66rpx;
+  margin-left: 2%;
+}
+
+.menus{
+    width:30%;
+    height: 100%;  
+}
+.image_box{
+   height: 80rpx;
+}
+.menus image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.menus text{
+  color: #666666;
+   font-size: 28rpx;
+   margin-top: 32rpx;
+   letter-spacing:2rpx;
+}
+
+.tail_frame{
+  width: 100%;
+  height: 300rpx;
+  background-color: #ffffff;
+  margin-top: 20rpx;
+}
+.function{
+   width: 600rpx;
+   height: 100rpx;
+   margin-left: 76rpx;
+
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  color: #666666;
+
+}
+.fun0{
+      border-bottom: 1px #eeeeee solid;
+}
+.fun1{
+       border-bottom: 1px #eeeeee solid;
+}
+
+.function text{
+  margin-left: 40rpx;
+}
+.icon0{
+  width: 30rpx;
+  height: 32rpx;
+}
+.icon1{
+  width: 32rpx;
+  height: 30rpx;
+}
+.icon2{
+  width: 28rpx;
+  height: 28rpx;
+}
+.arrow{
+  width: 14rpx;
+  height: 26rpx;
+  right: 76rpx;
+  position: absolute;
+
+}
+
+
+.attention{
+   width: 35%;
+   height: 160rpx;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-box-align: center;
+    -webkit-box-pack: center; 
+   /*-webkit-box-direction: normal;*/
+   -webkit-box-direction: normal;
+   font-size: 30rpx;
+}
+.fans{
+  width:35%;
+  height:160rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: center;
+   -webkit-box-pack: center; 
+  -webkit-box-direction: normal;
+  font-size: 30rpx;
+  /* -webkit-box-direction: reverse; */
+}
+
+.attention_item{
+   width:60rpx;
+   height:35%;
+}
+.fans_item{
+   width:60rpx;
+   height:35%;
+}
+.af_number{
+   width:100%;
+   height:33%;
+   position: absolute;
+   top:5%;
+   font-size: 30rpx;
+}
+.A_number{
+   width:100%;
+   height:30%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.F_number{
+   width:100%;
+   height:30%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.my_avatar{
+  margin-top: -58rpx;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius:50% 50%;
+  border: 4rpx #ffffff solid;
+  z-index: 100;
+  text-align: center;
+}
+.my_avatar image{
+
+  border-radius:50% 50%;
+   width: 140rpx;
+  height: 140rpx;
+}
+.my_avatar text{
+width: 100%;
+font-size:40rpx;
+align-content:center;
+position:absolute;
+left:0;
+top:208rpx;
+}
+
+

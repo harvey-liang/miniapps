@@ -1,0 +1,43 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/navigation/navigation",
+    "pages/edit/edit",
+    "pages/logs/logs",
+    "pages/menu/menus/menus",
+    "pages/personal/personals/personals",
+    "pages/we-cropper-master/example/normal/normal",
+    "pages/function/health/health",
+    "pages/function/ScoreVersionTwo/ScoreVersionTwo",
+    "pages/function/details/details",
+    "pages/sociality/probering/probering",
+    "pages/function/WeChatLicense/WeChatLicense",
+    "pages/function/camera/camera",
+    "pages/personal/CollectPictures/CollectPictures",
+    "pages/personal/MyDynamic/MyDynamic",
+    "pages/function/description/description",
+    "pages/function/MobileBinding/MobileBinding",
+    "pages/personal/Visitor/Visitor",
+    "pages/sociality/MoveDetails/MoveDetails",
+    "pages/paging/paging",
+    "pages/personal/HisHome/HisHome",
+    "pages/personal/attention_page/attention_page",
+    "pages/personal/vermicelli_page/vermicelli_page",
+    "pages/sociality/attention_circle/attention_circle"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": false
+  },
+  "networkTimeout": {
+    "request": 100000,
+    "downloadFile": 100000,
+    "uploadFile": 300000,
+    "connectSocket": 100000
+  },
+  "debug": true
+  
+}

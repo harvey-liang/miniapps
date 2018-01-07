@@ -1,0 +1,12 @@
+
+ <import src="../../dist/weCropper.wxml"/>
+ <view class="cropper-wrapper">
+    <template is="weCropper" data="{{...cropperOpt}}"/>
+  
+</view>
+<view class='whole_box'style='height:{{wHeight}}px'>
+  <import src="../../../edit/edit.wxml"/>
+  <template class="template" is="edit"/>
+  <canvas  class="Canva" style="width:200rpx;height:200rpx;" canvas-id="attendCanvasId"/>
+</view>
+  

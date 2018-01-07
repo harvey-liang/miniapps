@@ -1,0 +1,26 @@
+<!--pages/function/WeChatLicense/WeChatLicense.wxml-->
+<view class='whole'>
+  <view class='company_box'>
+     <view class='logo_box Vertical'>
+       <image class="logo" src="../image/logo.png" />
+     </view>
+     <view class='project_name Vertical'>
+       探头V
+     </view>
+     <view class='company_name Vertical'>
+       深圳市到点网科技有限公司
+     </view>
+  </view>
+  <view class="choice_box">
+     <view class="first_line">该程序将获得以下授权:</view>
+     <view class="second_line"> · 获得您的公开信息（昵称头像等）</view>
+     <view class="button_box">
+        <view class="refuse Vertical" bindtap="refuse">
+          拒绝
+        </view>
+        <button class="allow Vertical"  wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+           允许
+        </button>
+     </view>
+  </view>
+</view>

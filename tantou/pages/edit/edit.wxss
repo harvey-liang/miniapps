@@ -1,0 +1,53 @@
+/* pages/edit/edit.wxss */
+.preview{
+  width: 100%;
+}
+.white_box{
+  width: 100%;
+  height:20%;
+  
+}
+.white_box text{
+  font-size: 35rpx;
+  color: #00cbc8;
+  margin-left: 26%;
+  letter-spacing: 5rpx;
+}
+.complete{
+  margin-left: 8%;
+  font-size: 30rpx;
+  color: #00cbc8;
+  width: 20%;
+  height:100%;
+  float: right;
+}
+.operation_tips{
+  width: 100%;
+  height: 60%;
+  color: #666666;
+  font-size: 30rpx;
+}
+.left_box{
+  width: 50%;
+  height: 100%;
+}
+.right_box{
+  width: 50%;
+  height: 100%;
+}
+.v image{
+    width: 120rpx;
+   height: 168rpx;
+}
+.h image{
+    width: 168rpx;
+   height: 120rpx;
+}
+.v{
+      width: 80%;
+   height: 80%;
+}
+.h{
+     width: 80%;
+   height: 80%;
+}

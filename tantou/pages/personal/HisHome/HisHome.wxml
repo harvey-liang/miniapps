@@ -1,0 +1,41 @@
+<!--pages/personal/HisHome/HisHome.wxml-->
+<view class='wholes'>
+   <!-- 顶部框开始 -->
+   <view class='top_box flex'>
+    
+      <view class="attention">
+      <view class="A_number">关注</view>
+      <image class="attention_item" src="http://owkgytr8g.bkt.clouddn.com/image/jpg/guanzhu.png"></image>
+       <view class="A_number">{{userInfo.attention}}</view>  <!--  关注量view -->
+    </view>    <!--  关注view -->
+    <view class="my_avatar">  
+      <image bindtap="bindViewTap" src="{{userInfo.headpic}}" background-size="cover"></image>
+      <text>{{userInfo.nickname}}</text>
+    </view>
+     <view class="fans">
+       <view class="A_number">粉丝</view>
+       <image class="fans_item" src="http://owkgytr8g.bkt.clouddn.com/image/jpg/fensi.png"></image>
+       <view class="F_number">{{userInfo.fans}}</view> <!--  粉丝量view -->
+     </view>   
+   </view>
+    <!-- 顶部框结束 -->
+    <view class='attention_box flex'>
+       <view class='attention_boxs' data-attented="{{userInfo.attented}}" data-uid='{{userInfo.user_id}}' bindtap='Attention'>
+           <image wx:if="{{userInfo.attented==0}}" src='../image/jiaguanzhu1.png'></image>
+       <image  wx:if="{{userInfo.attented==1}}" src='../image/yiguanzhu2.png'></image>
+       </view>
+    </view>
+    <view class='background'>
+        <view class='title'>
+      <view class='part'> <image src='../image/xian.png'></image> </view>
+      <view class='tit'> <text>他的动态</text></view>
+      <view class='part'> <image src='../image/xian.png'></image></view>
+    </view>
+    </view>
+    <!--他的动态滚动框-->
+     <view  class='scroll_box'>
+        <import src="../../sociality/probering/probering.wxml"/>
+    <template class="template" is="circle" data="{{Loading,datas,windowWidth,fen,userInfo,headpic,preloading}}"/>
+     </view>
+</view>
+ 

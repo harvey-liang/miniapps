@@ -1,0 +1,98 @@
++
+<!--pages/personal/personals/personals.wxml-->
+<template name="my">
+
+<view class="{{disjunctor ? 'popup':'hide'}} flex"> 
+  
+    <view class="{{disjunctor ? 'prompt':'hide'}}">
+        <view class='flex' style='height: 200rpx;'>
+           <text>确认进入客服回话</text>
+        </view>
+        <view class='choice' style='height: 100rpx;'>
+          <button class='flex cancel' bindtap='cancel'> 取消</button>
+          <button class='flex confirm'bindtap="confirm" open-type='contact'>确认</button>
+        </view>
+    </view>
+</view>
+<view class='wholes'>
+  <!-- 顶部框开始 -->
+   <view class='top_box flex'>
+    
+      <view class="attention" bindtap='jump_attention'>
+      <view class="A_number">关注</view>
+      <image class="attention_item" src="http://owkgytr8g.bkt.clouddn.com/image/jpg/guanzhu.png"></image>
+       <view class="A_number">{{attention}}</view>  <!--  关注量view -->
+    </view>    <!--  关注view -->
+    <view class="my_avatar">  
+      <image bindtap="bindViewTap" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text>{{userInfo.nickName}}</text>
+    </view>
+     <view class="fans" bindtap='jump_vermicelli'>
+       <view class="A_number">粉丝</view>
+       <image class="fans_item" src="http://owkgytr8g.bkt.clouddn.com/image/jpg/fensi.png"></image>
+       <view class="F_number">{{fans}}</view> <!--  粉丝量view -->
+     </view>   
+   </view>
+
+    <!-- 顶部框结束 -->
+    <!-- 中间框开始 -->
+    <view class='options_box'>
+     <view style=' width: 100%;height: 66rpx;'></view>
+      <view class='options flex'>
+          <view class='menus'>
+          <view  class='image_box Vertical' bindtap='collection'>
+              <image  src='../image/shoucangtupian.png'></image>
+          </view>
+             <text class='Vertical'>收藏图片</text>
+          </view>
+           <view class='menus'>
+           <view  class='image_box Vertical' bindtap='MyDynamic'>
+              <image src='../image/paizhaojilu.png'></image>
+           </view>
+             <text class='Vertical'>个人动态</text>
+          </view>
+          <view class='menus' bindtap='Visitor'>
+          <view  class='image_box Vertical'>
+             <image  src='../image/diaozanlishi.png'></image>
+          </view>
+             <text class='Vertical'>访客记录</text>
+          </view>
+      </view>
+    </view>
+    <!-- 中间框结束 -->
+    <view class='tail_frame'>
+         <view class='function fun{{index}}' wx:key="{{item}}" wx:for="{{functions}}" data-idx="{{index}}" bindtap="polynomeTap">
+             <image class='icon{{index}}' src='{{item.icon}}'></image>
+             <text>{{item.text}}</text>
+             <image class='arrow' src='{{arrow}}'></image>
+         </view>
+    </view>
+</view>
+</template> 
+<template name="authorize">
+   <view class='completes'>
+  <view class='company_box'>
+     <view class='logo_box Vertical'>
+       <image class="logo" src="../function/image/logo.png" />
+     </view>
+     <view class='project_name Vertical'>
+       探头V
+     </view>
+     <view class='company_name Vertical'>
+       深圳市到点网科技有限公司
+     </view>
+  </view>
+  <view class="choice_box">
+     <view class="first_line">该程序将获得以下授权:</view>
+     <view class="second_line"> · 获得您的公开信息（昵称头像等）</view>
+     <view class="button_box">
+        <view class="refuse Vertical" bindtap="refuse" style=''>
+          拒绝
+        </view>
+        <button class="allow Vertical"  open-type="getUserInfo" bindgetuserinfo="getUserInfo" style=''>
+           允许
+        </button>
+     </view>
+  </view>
+</view>
+</template> 

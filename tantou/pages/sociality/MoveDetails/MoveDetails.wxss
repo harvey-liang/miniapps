@@ -1,0 +1,96 @@
+/* pages/sociality/MoveDetails/MoveDetails.wxss */
+@import "../probering/probering.wxss";
+.sliding_frame {
+width:100%;
+height: 1104rpx;
+}
+.discuss_box{
+  width: 100%;
+}
+.top_text{
+  width: 100%;
+  height: 80rpx;
+  font-size: 32rpx;
+}
+.discuss_say{
+  width: 100%;
+  height: 140rpx;
+  display: flex;
+  flex-direction: row;
+}
+.discuss_say image{
+   width: 80rpx;
+  height: 80rpx;
+  margin:0 40rpx 0 40rpx;
+}
+.content{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+.name{
+   font-size: 28rpx;
+}
+.name text{
+   font-size: 28rpx;
+   color: rgb(0, 203, 201)
+}
+.name image{
+  width: 30rpx;
+  height: 30rpx;
+  float: right;
+  margin: 0 10rpx 0 10rpx;
+}
+.like_number{
+  float: right;
+  margin: 0;
+}
+.speak{
+  width: 100%;
+  margin-top: 20rpx;
+  font-size: 24rpx;
+ 
+}
+.speak text{
+   color: rgb(0, 203, 201)
+}
+.speech_making{
+  width: 100%;
+  height: 100rpx;
+  border-top: 1px solid rgb(136, 136, 136);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position:fixed;
+  bottom: 0;
+  background-color: #ffffff;
+  z-index: 1000000;
+}
+
+.blank{
+   width: 100%;
+  height: 100rpx;
+  font-size: 28rpx;
+}
+.text_box{
+  width: 60%;
+  height:80rpx;
+  margin:40rpx 20rpx 0rpx 20rpx;
+  font-size: 24rpx;
+  color: rgba(136, 136, 136, 0.66);
+  z-index: 1000000;
+}
+.Send_out{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0;
+  padding: 0;
+  border-radius: 50% 50%;
+  font-size: 30rpx;
+}
+ .speech_making button::after {
+  border: 0;
+} 

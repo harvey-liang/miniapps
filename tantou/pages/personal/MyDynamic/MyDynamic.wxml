@@ -1,0 +1,56 @@
+<!--pages/personal/MyDynamic/MyDynamic.wxml-->
+<scroll-view scroll-y class='probering'>
+  <view class='recommend_box' wx:for="{{datas}}" wx:key="item"
+     bindtap='look_up'  data-information='{{item}}' >
+    <!-- 顶部信息框开始 -->
+    <view class='Top_information'>
+      <view class="info_box">
+        <image class="avatar" wx:if="{{loginInfo.headpic}}" src='{{loginInfo.headpic}}'></image>
+        <view class="uesr">
+          <text class="uesr_name Vertical">{{loginInfo.nickname}}</text>
+          <text class="time Vertical">{{item.add_time}}</text>
+        </view>
+      
+      </view>
+     
+    </view>
+    <!-- 顶部信息框结束 -->
+
+    <view class="description_box">
+      <!-- 描述框开始 -->
+      <textarea class="textareabox">{{item.say}}</textarea>
+    </view>
+    <!-- 描述框结束 -->
+
+    <view class="image_box" style='height:{{windowWidth}}px'>
+      <!-- 图片框开始 -->
+      <image wx:if="{{item.img_url}}" style='width:{{windowWidth}}px; height:{{windowWidth}}px' src='{{item.img_url}}' bindload='' />
+      <view class='score_box'>
+       <image class='flex'  src='../../sociality/image/defenquan.png'>
+       </image>
+        <text class="flex">{{item.score}}{{fen}}</text>
+      </view>
+    </view>
+    <!-- 图片框结束 -->
+    <!-- <view class="comment_box"> -->
+      <!-- 选项框开始 -->
+      <!-- <view class="Grid">
+        <view class="Grid-cell ">
+        <image src='../../sociality/image/dianzan.png' />
+          <text>{{item.zan_num}}</text>
+        </view>
+        <view class="Grid-cell borber">
+         <image src='../../sociality/image/pinglun.png' />
+          <text>{{item.comment_num}}</text>
+        </view>
+        <view class="Grid-cell borber">
+           <image src='../../sociality/image/fenxiangs.png' />
+           <text>分享</text>
+        </view>
+      </view>
+    </view> -->
+     <!-- 选项框结束 -->
+     <view class='Partition_box'> </view>
+  </view>
+   
+</scroll-view>

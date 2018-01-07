@@ -1,0 +1,128 @@
+<!--pages/probering/probering.wxml-->
+ <template name="circle">
+
+ <view class="{{Loading ? 'Load_animation':'probering_hide'}} flex">
+   <image style='width:600rpx;height:600rpx;'  src='../image/BANNER.png'></image>
+</view> 
+<view  class="{{Loading ? 'probering_hide':'proberings'}}">
+  <view class='activity'>
+    <image style='width:100%;height:100%;' src='../image/BANNER.png'></image>
+  </view>
+    <view class='recommend_box' wx:for="{{datas}}" wx:key="item"
+     bindtap='look_up'  data-information='{{item}}'>
+    <!-- 顶部信息框开始 -->
+    <view class='Top_information'>
+      <view class="info_box"  data-uid='{{item.user_id}}'  catchtap='jump_homepage'>
+             <image class="{{headpic==false ? 'avatar':'none'}}" wx:if="{{item.headpic}}" src='{{item.headpic}}'></image> 
+                <image class="{{headpic==true ? 'avatar':'none'}}" wx:if="{{headpic==true}}" src='{{userInfo.headpic}}'></image>  
+        <view class="uesr">
+          <view class="{{headpic==false ? 'uesr_name':'none'}} Vertical" wx:if="{{item.nickname}}" >
+            <text>{{item.nickname}}</text> 
+          </view>
+           <view  class="{{headpic==true ? 'uesr_name':'none'}} Vertical" wx:if="{{headpic==true}}" >
+             <text>{{userInfo.nickname}}</text>
+          </view>
+          <view class="time Vertical">
+             {{item.add_time}}
+          </view>
+        </view> 
+      </view>
+    </view>
+    <!-- 顶部信息框结束 -->
+
+    <view class="description_box">
+      <!-- 描述框开始 -->
+      <textarea disabled="false"  class="textareabox">{{item.say}}</textarea>
+    </view>
+    <!-- 描述框结束 -->
+
+    <view class="image_box" style='height:{{windowWidth}}px'>
+      <!-- 图片框开始 -->
+      <!-- bindload="imageOnLoad" binderror="imageOnLoadError" -->
+       <image class="{{preloading==true ? '':'none'}}"  wx:if="{{item.img_url}}" style='width:{{windowWidth}}px; height:{{windowWidth}}px' src='{{item.img_url}}'  bindload='preloading'/> 
+        <image  wx:if="{{preloading==false}}" style='width:{{windowWidth}}px; height:{{windowWidth}}px' src='http://owkgytr8g.bkt.clouddn.com/yujiazai.jpg' /> 
+      <view class='score_box'>
+       <image class='flex'  src='../image/defenquan.png'>
+        
+       </image>
+        <text class="flex">{{item.score}}{{fen}}</text>
+      </view>
+    </view>
+    <!-- 图片框结束 -->
+
+     <!-- 选项框结束 -->
+     <view class='Partition_box'> </view>
+  </view>  
+   <view style='width:100%;height:120rpx;'>
+    <image style='width:100%;height:100rpx;' src='../image/BANNER.png'></image>
+  </view>
+</view>
+ </template> 
+
+    <view class="{{Loading ? 'Load_animation':'probering_hide'}} flex">
+   <image style='width:600rpx;height:600rpx;'  src='../image/BANNER.png'></image>
+</view> 
+<view  class="{{Loading ? 'probering_hide':'probering'}}" >
+  
+    <view class='recommend_box' wx:key="item"
+     bindtap='look_up'  data-information='{{item}}'  wx:for="{{datas}}" wx:key="item" >
+    <!-- 顶部信息框开始 -->
+    <view class='Top_information'>
+      <view class="info_box">
+             <image class="avatar" wx:if="{{item.headpic}}" src='{{item.headpic}}'></image> 
+        <view class="uesr">
+          <view class="uesr_name Vertical">
+             {{item.nickname}}
+          </view>
+          <view class="time Vertical">
+             {{item.add_time}}
+          </view>
+        </view> 
+      </view>
+      <!-- <view data-attented="{{item.attented}}"  data-did='{{item.display_id}}}' data-uid='{{item.user_id}}' id="{{index}}"  bindtap='follows' class='follow flex' wx:if="{{item.user_id !== uid}}">
+         <image wx:if="{{item.attented == 1}}" src='../image/yiguanzhu.png'></image>
+         <image wx:if="{{item.attented == 0}}" src='../image/BANNER.png'></image>
+      </view> -->
+    </view>
+    <!-- 顶部信息框结束 -->
+
+    <view class="description_box">
+      <!-- 描述框开始 -->
+      <textarea disabled="false"  class="textareabox">{{item.say}}</textarea>
+    </view>
+    <!-- 描述框结束 -->
+
+    <view class="image_box" style='height:{{windowWidth}}px'>
+      <!-- 图片框开始 -->
+      <image  wx:if="{{item.img_url}}" style='width:{{windowWidth}}px; height:{{windowWidth}}px' src='{{item.img_url}}' bindload="imageOnLoad" binderror="imageOnLoadError"/>
+      <view class='score_box'>
+       <image class='flex'  src='../image/defenquan.png'>
+        
+       </image>
+        <text class="flex">{{item.score}}{{fen}}</text>
+      </view>
+    </view>
+    <!-- 图片框结束 -->
+    <view class="comment_box">
+      <!-- 选项框开始 -->
+      <view class="Grid">
+        <view class="Grid-cell " data-uid='{{item.display_id}}' id="{{index}}" bindtap='praise'>
+        <image src='../../sociality/image/dianzan.png' />
+          <text>{{item.zan_num}}</text>
+        </view>
+        <view class="Grid-cell borber">
+         <image src='../../sociality/image/pinglun.png' />
+          <text>{{item.comment_num}}</text>
+        </view>
+        <view class="Grid-cell borber">
+           <image src='../../sociality/image/fenxiangs.png' />
+            <button class='Features forbutton' open-type="share" data-uid='{{item}}'
+             >分享</button>
+        </view>
+      </view>
+    </view>
+     <!-- 选项框结束 -->
+     <view class='Partition_box'> </view>
+  </view>
+    
+</view>

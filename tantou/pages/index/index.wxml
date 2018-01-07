@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view class='whole'>
+<import src="../navigation/navigation.wxml"/>
+  <template class="template" is="navigation" data="{{navbar,currentTab}}"/>
+  <view class='probering' hidden="{{currentTab!==0}}">
+      <import src="../sociality/probering/probering.wxml"/>
+    <template class="template" is="circle" data="{{Loading,datas,windowWidth,fen,headpic,preloading}}"/> 
+  </view>
+  <view class='probering' hidden="{{currentTab!==1}}">
+    <view class='subject'>
+       <view class='function_button flex'>
+        <view class='box flex'>
+          <image class='menu_button'
+           src='../image/quanzi.png' bindtap='jump_social'></image>
+        </view>
+        <view class='box flex'>
+          <image class='camera_button' 
+          src='../image/paizhao.png' bindtap='camera_retrieval'></image>
+        </view>
+        <view class='box flex'>
+          <image class='album_button'
+           src='../image/xiangce.png' bindtap='album_retrieval'></image>
+        </view>
+       </view>
+    </view>
+  </view>
+  <view class='probering' hidden="{{currentTab!==2}}">
+    <import src="../personal/personals/personals.wxml"/>
+    <template class="template" is="{{social}}" data="{{arrow,functions,userInfo,hasUserInfo,canIUse,attention,fans,disjunctor}}"/>
+  </view>
+</view>

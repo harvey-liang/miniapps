@@ -1,0 +1,70 @@
+ 
+ <view class="{{container}}">
+     <view class="box">                
+     </view>
+        <view class="white_box">
+
+    <scroll-view class="dishes_box" scroll-y   scroll-top="0">
+      <view  wx:for="{{food}}"  id="{{index}}"  wx:key="this" class="{{activeIndex==index? 'dishe':'dishes'}}"bindtap="active">   
+        <view class="lower_border">
+          <view  wx:key="*this" class="{{activeIndex==index? 'blue_bars':''}}"bindtap="active"></view>
+          {{item.food_name}}
+          <view   wx:key="*that" class="{{activeIndex==index? 'active':'arrow'}}"bindtap="active"></view>
+        </view>
+        <scroll-view scroll-y  wx:key="that" class="{{activeIndex==index? 'dish_details':'dish'}}"bindtap="active"> {{item.intro}}</scroll-view>
+      </view>      
+    </scroll-view>
+     <view class="title_text">
+      菜色详情    
+     </view>
+     <image class="cross" bindtap="shut_down" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkYwMDA5MTE0OEM4RTExRTdBRTVFRTA1RjUxNzhBOTA2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkYwMDA5MTE1OEM4RTExRTdBRTVFRTA1RjUxNzhBOTA2Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjAwMDkxMTI4QzhFMTFFN0FFNUVFMDVGNTE3OEE5MDYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjAwMDkxMTM4QzhFMTFFN0FFNUVFMDVGNTE3OEE5MDYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7HohKvAAAHKUlEQVR42uyd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"></image>
+    </view>  
+   </view>
+  <view class="whole">
+    <import src="../../paging/paging.wxml"/>
+    <template class="template" is="score_interface" data="{{path,height}}"/>
+  </view>
+ <modal hidden="{{hidden}}" title="授权提示" confirm-text="设置" cancel-text="取消" bindcancel="cancels" bindconfirm="confirm">
+  保存图片到相册需要设置允许授权
+</modal> 
+
+  <!-- <view class='picture_box flex' >
+        <image wx:if="{{imgsrc}}" style='width:{{windowWidth}}px;height:{{windowWidth}}px ' src='{{imgsrc}}'></image> 
+  </view>
+  <view class='second_half'>
+     <view class='score_box'>
+       <view class='back flex'>
+         <image class='play'bindtap="jump_play"  src='../image/zhichi.png'></image>
+       </view>
+       <view class="{{hide ?'left_point':'dis'}} flex">
+         <image class='point' src='../image/zuobo.png'></image>
+       </view>
+        <view class='{{fraction}} flex'>
+          <text class='number'>{{post}}</text>
+          <text class='test'>{{promptmessage}}</text>
+        </view>
+       <view class="{{hide ?'right_point':'dis'}} flex">
+         <image class='point' src='../image/youbo.png'></image>
+       </view>
+       <view class='save flex'>
+         <image class='play'bindtap="saves" src='../image/baocun.png'></image>
+       </view>
+     </view>
+     <view class='bottom_box'>
+       <view class='release flex'>
+         <image class='Features' src='../image/fabu.png' bindtap="publish_event"></image>
+       </view>
+          <view class='big_point flex'>
+              <image class='Feature' src='../image/dian.png'></image>
+          </view>
+       <view class='details flex'>
+           <image bindtap="show_dishes" class='Features' src='../image/caipin.png'></image>
+       </view>
+          <view class='big_point flex'>
+             <image  class='Feature' src='../image/dian.png'></image>
+          </view>
+       <view class='forwarding flex'>
+            <button class='Features forbutton' open-type="share"></button>
+       </view>
+     </view>
+  </view> -->

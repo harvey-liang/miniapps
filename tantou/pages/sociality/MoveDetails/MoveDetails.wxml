@@ -1,0 +1,110 @@
+
+  <form style='width:100%;' bindsubmit="formSubmit" bindreset="formReset">
+<view class='speech_making'>
+<textarea bindinput="bindTextAreaBlur"  fixed="true" show-confirm-bar="true" bindblur="bindTextAreaBlur" class='text_box' placeholder="{{prompt}}" value='{{placeholder}}'></textarea>
+      <button class='Send_out' bindtap='Send_out'>发送</button>
+</view>
+ </form>
+
+<scroll-view scroll-y class='sliding_frame'  bindscrolltolower="{{lower}}"
+lower-threshold="0" scroll-top="{{p_number}}">
+  <view class='recommend_box'>
+    <!-- 顶部信息框开始 -->
+    <view class='Top_information'>
+      <view class="info_box">
+        <image class="avatar" wx:if="{{details.headpic}}" src='{{details.headpic}}'   data-uid='{{details.user_id}}'  bindtap='jump_homepage'></image>
+        <view class="uesr">
+          <text class="uesr_name Vertical" data-uid='{{details.user_id}}'  bindtap='jump_homepage' >{{details.nickname}}</text>
+          <text class="time Vertical">{{details.add_time}}</text>
+        </view>
+      </view>
+       <view data-attented="{{details.attented}}"  data-did='{{details.display_id}}}' data-uid='{{details.user_id}}'  bindtap='follows' class="{{attented? 'follow':'none'}}" wx:if="{{details.user_id !== uid}}">
+         <image wx:if="{{details.attented == 1}}" src='../image/yiguanzhu.png'></image>
+         <image wx:if="{{details.attented == 0}}" src='../image/jiaguanzhu.png'></image>
+      </view>
+    </view>
+    <!-- 顶部信息框结束 -->
+
+    <view class="description_box">
+      <!-- 描述框开始 -->
+      <textarea disabled="true" class="textareabox">{{details.say}}</textarea>
+    </view>
+    <!-- 描述框结束 -->
+
+    <view class="image_box" style='height:{{systemInfo.windowWidth}}px'>
+      <!-- 图片框开始 -->
+      <image class="{{preloading==true ? '':'none'}}" wx:if="{{details.img_url}}" style='width:{{systemInfo.windowWidth}}px; height:{{systemInfo.windowWidth}}px' src='{{details.img_url}}' 
+      bindload='preloading' />
+      <image wx:if="{{preloading==false}}" style='width:{{systemInfo.windowWidth}}px; height:{{systemInfo.windowWidth}}px' src='http://owkgytr8g.bkt.clouddn.com/yujiazai.jpg'/>
+      <view class='score_box'>
+       <image class='flex'  src='../image/defenquan.png'>
+       </image>
+        <text class="flex">{{details.score}}{{fen}}</text>
+      </view>
+    </view>
+    <!-- 图片框结束 -->
+    <view class="comment_box">
+      <!-- 选项框开始 -->
+      <view class="Grid">
+        <view class="Grid-cell "data-thumbuped='{{details.thumbuped}}  
+        data-uid='{{details.display_id}}'  bindtap='praise'>
+         <image wx:if="{{details.thumbuped ==0}}" src='../image/dianzan.png'  />
+         <image wx:if="{{details.thumbuped ==1}}" src='../image/dianzanz.png'  />
+          <text>{{details.zan_num}}</text>
+        </view>
+        <view class="Grid-cell borber"data-uid='{{details.display_id}}'  bindtap='collect'>
+         <image wx:if="{{details.collected==0}}" src='../image/shoucang.png' />
+        <image wx:if="{{details.collected==1}}" src='../image/yishoucang.png' /> 
+          <text>收藏</text>
+        </view>
+       <view class="Grid-cell borber">
+           <image src='../../sociality/image/fenxiangs.png' />
+            <button class='Features forbutton' 
+            open-type="share" data-uid='{{details}}'>分享</button>
+        </view>
+      </view>
+    </view>
+     <!-- 选项框结束 -->
+     <view class='Partition_box'> </view>
+  </view>
+   <view class=' discuss_box'>
+       <view class='top_text flex'>
+            评论 {{details.comment_num}}
+       </view> 
+       <view class='discuss_say' wx:key="{{index}}" data-comment="{{item}}" wx:for="{{comment}}" bindtap='reply'>
+          <image  data-uid='{{item.user_id}}' bindtap='jump_homepage'  class='circular' wx:if="{{item.headpic}}" src='{{item.headpic}}'></image>
+            <!-- 普通评论 -->
+          <view class='content'  wx:if="{{item.to_user_id==0}}">
+            <view class='name'>
+               <text data-uid='{{item.user_id}}'  bindtap='jump_homepage'>{{item.nickname}}</text>
+               <text class='like_number'>{{item.zan_num}}</text>
+               <!-- 未评论点赞图片显示 -->
+              <image data-comment='{{item}}' id="{{index}}" 
+              wx:if="{{item.zaned==0}}" catchtap='comment_praise' src='../image/dianzan.png'></image>
+              <!-- 已评论点赞图片显示 -->
+               <image data-comment='{{item}}' id="{{index}}"
+               wx:if="{{item.zaned==1}}"catchtap='comment_praise' src='../image/dianzanz.png'></image>
+            </view>
+            <textarea class='speak' disabled="true" >{{item.content}}</textarea>
+          </view>
+
+          <!-- @回复评论 -->
+          <view class='content'  wx:if="{{item.to_user_id>0}}">
+             <view class='name'>
+              <text data-uid='{{item.user_id}}' bindtap='jump_homepage'>{{item.nickname}}</text>
+               <text class='like_number'>{{item.zan_num}}</text>
+              <image data-comment='{{item}}'id="{{index}}" 
+              wx:if="{{item.zaned==0}}"src='../image/dianzan.png' catchtap='comment_praise'></image>
+                <image data-comment='{{item}}'id="{{index}}"
+                 wx:if="{{item.zaned==1}}"src='../image/dianzanz.png' catchtap='comment_praise'></image>
+            </view> 
+              <textarea  disabled="true" class='speak'> 回复<text  data-uid='{{item.to_user_id}}' bindtap='jump_homepage'>{{item.to_nickname}}</text>：
+              {{item.content}}</textarea>
+          </view>
+
+       </view>
+   </view>
+   <view class='blank flex'>
+      --我也是有底线的--
+   </view>
+</scroll-view>

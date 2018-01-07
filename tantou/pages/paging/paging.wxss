@@ -1,0 +1,40 @@
+/* pages/test/test.wxss */
+.whole{
+  background-color: #f4f4f4;
+  overflow: hidden;
+}
+.img_box{
+  width: 100%;
+  height: 85%;
+}
+.Canva{
+   position: absolute;
+  top:200%;
+}
+
+.function_frame{
+  width: 84%;
+  flex-direction: row;
+  margin-left: 8%;
+   align-items: flex-start; 
+}
+
+.function_box{
+  width: 157.5rpx;
+  flex-direction:column;
+  display: flex;
+  flex:1;
+  align-items: center;
+  justify-content: center;
+}
+ .share{
+   background: url(http://owkgytr8g.bkt.clouddn.com/fenxiang.png)no-repeat;
+   background-size: 100% 100%;
+}
+.function_box button::after {
+  border: 0;
+}  
+
+ .test{
+  
+} 

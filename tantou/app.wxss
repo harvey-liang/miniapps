@@ -1,0 +1,70 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+.completes{
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  margin: 0;
+  background-color: #ffffff;
+}
+.whole{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.hide{
+  display: none;
+}
+.none{
+  display: none;
+}
+.flex{
+   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.probering{
+  width: 100%;
+  height: 90%;
+}
+.Vertical{
+  float:inherit;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-box-align: center;
+    -webkit-box-pack: center; 
+    -webkit-box-direction: normal;
+    
+}
+.b_round{
+  border-radius: 50% 50%;
+}
+.float{
+  float:right;
+}
+.position_a{
+  position: absolute;
+}
+.position_r{
+  position:relative;
+}
+.display_v{
+  display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-box-align: center;
+    -webkit-box-pack: center; 
+   /*-webkit-box-direction: normal;*/
+   -webkit-box-direction: normal;
+}
+.circular{
+   border-radius: 50% 50%;
+}
+ 

@@ -1,0 +1,5 @@
+<!--pages/menu/menus/menus.wxml-->
+<view class='whole'>
+ <import src="../../navigation/navigation.wxml"/>
+  <template class="template" is="navigation" data=""/> 
+</view>

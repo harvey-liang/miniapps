@@ -1,0 +1,7 @@
+<!--pages/personal/vermicelli_page/vermicelli_page.wxml-->
+<view class='whole'>
+   <view class='white_box' wx:for="{{array}}" wx:key="{{item}}" >
+      <image wx:if="{{item.headpic}}" src='{{item.headpic}}'></image>
+      <text>{{item.nickname}} </text>
+   </view>
+</view>

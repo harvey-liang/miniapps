@@ -1,0 +1,10 @@
+@import "../style/common.wxss";
+@import "../../../edit/edit.wxss";
+page{
+  overflow: hidden;
+  position: absolute;
+}
+.Canva{
+   position: absolute;
+  top:200%;
+}

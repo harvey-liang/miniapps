@@ -1,0 +1,70 @@
+<view class="page">
+
+  <!--侧边栏-->
+ <template name="items">    
+ <view class="personal_center" >
+  <view class="head">
+     <view class="attention">
+      <view class="A_number">关注</view>
+      <image class="attention_item" src="http://owkgytr8g.bkt.clouddn.com/image/jpg/guanzhu.png"></image>
+      <view class="{{hasUserInfo ? 'none':'A_number'}}">--</view>
+       <view class="{{hasUserInfo ? 'A_number':'hidden'}}">{{attention}}</view>  <!--  关注量view -->
+    </view>    <!--  关注view -->
+    <view class="avatar">  
+        <!-- <image src="{{userInfo.avatarUrl}}"> 
+        </image>   <!--  头像view -->
+        <!-- <text>{{userInfo.nickName}}</text> -->
+         <button class="avatar_button" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+    <block wx:else>
+      <image bindtap="bindViewTap" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text>{{userInfo.nickName}}</text>
+    </block>
+    </view>
+     <view class="fans">
+       <view class="A_number">粉丝</view>
+       <image class="fans_item" src="http://owkgytr8g.bkt.clouddn.com/image/jpg/fensi.png"></image>
+       <view class="{{hasUserInfo ? 'none':'F_number'}}">--</view>
+       <view class="{{hasUserInfo ? 'F_number':'hidden'}}">{{fans}}</view> <!--  粉丝量view -->
+     </view>   
+  </view>
+   <view class="under">
+    <view class="option" id="option{{index}}" wx:for="{{array}}" wx:key="message" style=" background: url({{item.image}}) no-repeat;background-size: 100% 100%;" bindtap='menu_jump' >
+      <image  src="{{item.icon}}"></image> {{item.message}}
+    </view>
+   </view>
+  </view> 
+    </template>     
+   <!-- <view class="views" bindtouchmove="viewT"  style="left:{{left}}px;top:{{top}}px">
+     使用鼠标拖动我
+   </view> -->
+   <!-- <movable-area style="height: 800px;width: 800px;background: red;">
+ <movable-view direction="all" style="left:-100px; height: 800px; width: 300px; background: blue;">
+ </movable-view>
+</movable-area> -->
+  </view>
+
+  
+   <!-- <swiper  indicator-dots="{{indicatorDots}}" vertical="ture"	
+     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+     <block wx:for="{{array}}">
+       <swiper-item>
+      <image src="{{item.image}}" class="slide-image" width="355" height="150"/>
+      </swiper-item>
+     </block>
+   </swiper> -->
+   <!-- <view class="white_box">
+   <swiper class="dishes_box" >
+      <view  wx:for="{{array}}"  id="{{index}}"  wx:key="*this" class="{{activeIndex==index? 'dishe':'dishes'}}"bindtap="active">   
+        <view  wx:key="*this" class="{{activeIndex==index? 'blue_bars':''}}"bindtap="active"></view>
+        {{item.message}}
+        <view   wx:key="*this" class="{{activeIndex==index? 'active':'arrow'}}"bindtap="active"></view>
+        <view  wx:key="*this" class="{{activeIndex==index? 'dish_details':''}}"bindtap="active"></view>
+      </view>      
+    </swiper>
+     <view class="title_text">
+      菜色详情
+       <image class="blue_frame" src="http://img0.ph.126.net/GLqaB38Cp4yKSCW_Y3e-ow==/6632277228491941455.png"> 
+     </image> 
+     </view>
+   <image class="cross" src="http://img2.ph.126.net/j8PNMgptt_9rDjGiREdgEg==/1285496218655841449.png"></image>
+  </view> -->

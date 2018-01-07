@@ -1,0 +1,13 @@
+<!--pages/personal/Visitor/Visitor.wxml-->
+<view class='whole'>
+   <view class='Record_frame' wx:for="{{array}}" wx:key="*this">
+     
+       <view class='Visitor a_items' >
+         <image class='Visitor_Avatar' wx:if="{{item.headpic}}" src='{{item.headpic}}'></image>
+         <text class='text_name'>{{item.nickname}}</text>
+         <view class='Point_time'>
+            <text>{{item.add_time}}</text>
+         </view>
+      </view>
+   </view>
+</view>

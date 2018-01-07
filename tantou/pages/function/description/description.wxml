@@ -1,0 +1,17 @@
+<!--pages/description/description.wxml-->
+  <view class="whole" style="overflow: hidden;">
+  <view class='picture_box flex' style='height:{{windowWidth}}px' >
+        <image wx:if="{{imgsrc}}" style='width:{{windowWidth}}px;height:{{windowWidth}}px ' src='{{imgsrc}}'></image> 
+  </view>
+  <view class='second'>
+     <view class='titele flex'>
+          <text>描述</text>  
+          <view class='next_step flex' bindtap="release">
+            <text>完成</text>  
+          </view>
+     </view>
+     <view class='bottom_s flex'>
+      <textarea bindinput="bindTextAreaBlur" bindblur="bindTextAreaBlur" class="textareabox" placeholder="{{placeholder}}"></textarea>
+     </view>
+  </view>
+</view>

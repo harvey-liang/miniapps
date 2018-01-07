@@ -1,0 +1,21 @@
+/* pages/personal/vermicelli_page/vermicelli_page.wxss */
+.white_box{
+  width:100%;
+  height: 140rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #eeeeee;
+
+}
+.white_box image{
+  width:100rpx;
+  height: 100rpx;
+  margin-left: 40rpx;
+  border-radius: 50% 50%;
+}
+.white_box text{
+  font-size: 28rpx;
+  color: rgb(68, 68, 68);
+  margin-left: 20rpx;
+}

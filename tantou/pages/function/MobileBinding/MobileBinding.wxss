@@ -1,0 +1,13 @@
+/* pages/function/MobileBinding/MobileBinding.wxss */
+.section{
+  width: 100%;
+  height: 100rpx;
+}
+.Obtain{
+   background-color: blue;
+   color: #ffffff;
+   width: 200rpx;
+   height: 80rpx;
+   margin: 0px;
+   padding: 0px;
+}

@@ -1,0 +1,38 @@
+<!--pages/test/test.wxml-->
+
+<view class='whole'>
+   <template name="score_interface"> 
+        
+   
+  <view class='img_box flex'>
+     <canvas  class="Canva" style="width:610rpx;height:906rpx;" canvas-id="attendCanvasId"/>  
+       <image bindtap='previewImage' src='{{path}}' style="width:610rpx;height:{{height}}px;"></image>
+  </view>
+  <view class='function_frame flex'>
+   <view class='function_box'  bindtap="publish_event">
+       <image  style=' width: 100rpx;height: 100rpx;'  src='../../image/fabu.png'></image>
+         <view style='font-size: 24rpx;margin-top: 20rpx;'>
+         发布动态
+       </view> 
+    </view>
+    <view  bindtap="show_dishes"    class='function_box'>
+       <image style=' width: 100rpx;height: 100rpx;'  src='../../image/xiangqing.png'></image>
+        <view style='font-size: 24rpx;margin-top: 20rpx;'>
+         菜品详情
+       </view> 
+    </view>  
+    <view class='function_box'> 
+        <button style=' width: 100rpx;height: 100rpx;' class='share' open-type="share"></button>
+         <view style='font-size: 24rpx;margin-top: 20rpx;'>
+         分享好友
+        </view> 
+    </view>  
+    <view class='function_box'   bindtap="saves">
+        <image style=' width: 100rpx;height: 100rpx;' src='../../image/baocun.png'></image>
+          <view style='font-size: 24rpx;margin-top: 20rpx;'>
+           保存图片
+         </view> 
+   </view>  
+   </view>
+      </template> 
+</view>

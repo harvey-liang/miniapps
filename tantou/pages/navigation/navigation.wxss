@@ -1,0 +1,22 @@
+/* pages/navigation/navigation.wxss */
+.navbar{   
+  position:fixed;
+  bottom: 0;
+  width: 100%;
+  height: 120rpx;
+  z-index: 100000;
+  background-color: #FFFFFF;
+}  
+.navbar .item{  
+  position: relative;  
+  width: 200rpx;
+  height: 100%; 
+  font-size: 35rpx;
+}  
+.navbar .item.active{  
+  color: #00cbc9;  
+}  
+.icon{
+   width: 46rpx;
+  height: 46rpx;
+}

@@ -1,0 +1,30 @@
+<!--pages/edit/edit.wxml-->
+<view class='whole_box'>
+   <scroll-view class='preview' scroll-x="{{scroll_x}}"  scroll-y="{{scroll_y}}"  style='height:{{pHeight}}px;' scroll-left="{{x}}" scroll-top="{{y}}" bindtouchstart="tap_start" bindtouchend="tap_end" bindtouchmove="tap_drag"  >
+      <image  bindtap="previewImage"  style="left:0; top:0; width:{{IWidth}}px; height:{{IHeight}}px;" mode="aspectFit" wx:if="{{imgsrc}}"  src="{{imgsrc}}" bindload="imageLoad">
+       </image>
+   </scroll-view>
+   <template name="edit"> 
+   <view class="white_box  flex">
+     <text>请调整照片识别区域</text>
+     <view class="complete flex"   bindtap="getCropperImage">
+       完成
+     </view>
+   </view>
+   <view class='operation_tips flex'>
+     <view class='left_box display_v'>
+       <view class='v display_v'>
+           <image  src='../../../image/shangxia.png'></image>
+       </view>
+           <text class='display_v'>竖拍照片上下移动调整</text>
+     </view>
+     <view class='right_box display_v'>
+        <view class='h display_v'>
+           <image  src='../../../image/zuoyou.png'></image>
+       </view>
+        
+        <text class='display_v'>横拍照片左右移动调整</text>
+     </view>
+   </view>
+   </template>  
+</view>

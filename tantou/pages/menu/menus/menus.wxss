@@ -1,0 +1,2 @@
+/* pages/menu/menus/menus.wxss */
+@import "../../navigation/navigation.wxss";

@@ -1,0 +1,86 @@
+.container {
+  height: 100%;
+  display:block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+.share{
+  margin: 20% 10%;
+}
+.hide{
+  margin: 0% 0%;
+  padding: 0% 0% 0% 2%;
+}
+.whole_box{
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+ 
+}
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Vertical{
+  float:inherit;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-box-align: center;
+    -webkit-box-pack: center; 
+    -webkit-box-direction: normal;
+    
+}
+.b_round{
+  border-radius: 50% 50%;
+}
+.float{
+  float:right;
+}
+.position_a{
+  position: absolute;
+}
+.position_r{
+  position:relative;
+}
+.display_v{
+  display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-box-align: center;
+    -webkit-box-pack: center; 
+   /*-webkit-box-direction: normal;*/
+   -webkit-box-direction: normal;
+}
+.cropper-wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #e5e5e5;
+}
+
+.cropper-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}
+
+.cropper-buttons .upload, .cropper-buttons .getCropperImage{
+    width: 50%;
+    text-align: center;
+}

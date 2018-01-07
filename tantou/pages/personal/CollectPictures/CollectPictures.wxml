@@ -1,0 +1,15 @@
+<!--pages/personal/CollectPictures/CollectPictures.wxml-->
+<scroll-view scroll-y class='whole'>
+  <view class='layout_box'>
+
+    <view style='background: url({{item.img_url}}) no-repeat; background-size: 100% 100%;' wx:for="{{array}}" wx:key="{{item}}" class='picture_box' bindtap='previewImage' data-img="{{item.img_url}}" >
+      <!-- <view style='background: url({{transparent}}) no-repeat;' class='b_color flex'>
+           <text class='number'>1张</text>
+          <text class="title">营养早餐</text>
+      </view> -->
+    </view>
+  </view>
+</scroll-view>
+
+   
+

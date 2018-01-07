@@ -1,0 +1,45 @@
+<!--pages/ScoreVersionTwo/ScoreVersionTwo.wxml-->
+ <template name="score">  
+<view class="whole"style='height:{{sHeight}}px' >
+  <view class='picture_box flex' >
+       <image wx:if="{{imgsrc}}" style='width:{{windowWidth}}px;height:{{windowWidth}}px ' src='{{imgsrc}}'></image>
+  </view>
+  <view class='second_half'>
+     <view class='score_box'>
+       <view class='back flex'>
+         <image class='play' src='../image/zhichi.png'></image>
+       </view>
+       <view class='left_point flex'>
+         <image class='point' src='../image/zuobo.png'></image>
+       </view>
+        <view class='fraction flex'>
+          <text class='number'>98</text>
+          <text class='test'>分</text>
+        </view>
+       <view class='right_point flex'>
+         <image class='point' src='../image/youbo.png'></image>
+       </view>
+       <view class='save flex'>
+         <image class='play' src='../image/baocun.png'></image>
+       </view>
+     </view>
+     <view class='bottom_box'>
+       <view class='release flex'>
+         <image class='Features' src='../image/fabu.png'></image>
+       </view>
+          <view class='big_point flex'>
+              <image class='Feature' src='../image/dian.png'></image>
+          </view>
+       <view class='details flex'>
+           <image class='Features' src='../image/caipin.png'></image>
+       </view>
+          <view class='big_point flex'>
+             <image class='Feature' src='../image/dian.png'></image>
+          </view>
+       <view class='forwarding flex'>
+            <image class='Features' src='../image/fenxiang.png'></image>
+       </view>
+     </view>
+  </view>
+</view>
+ </template>  

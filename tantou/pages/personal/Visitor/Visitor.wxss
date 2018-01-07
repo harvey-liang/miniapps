@@ -1,0 +1,44 @@
+/* pages/personal/Visitor/Visitor.wxss */
+.whole{
+  background-color: #f4f4f4;
+}
+.Record_frame{
+  width: 100%;
+  height: 120rpx;
+  background-color: #FFFFFF;
+  margin-top: 20rpx;
+}
+.time{
+  width: 100%;
+  height: 80rpx;
+  font-size: 35rpx;
+  margin-left: 40rpx;
+}
+.Visitor{
+  font-size: 30rpx;
+  width: 100%;
+  height: 120rpx;
+}
+.a_items
+{  
+  display: flex;
+  align-items: center;
+
+  }
+  .text_name{
+    color: #666666;
+  }
+  .Visitor_Avatar{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50% 50%;
+    margin: 0 40rpx;
+  }
+  .Point_time{
+    position: absolute;
+    right: 20rpx;
+    display: flex;
+    justify-content:flex-end;
+    color: #888888;
+
+  }

@@ -1,0 +1,101 @@
+/* pages/ScoreVersionTwo/ScoreVersionTwo.wxss */
+.whole{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.picture_box{
+  position:relative;
+  width: 100%;
+  height: 70%;
+}
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.second_half{
+  width: 100%;
+  height: 30%;
+  background-color: #00cbc9;
+}
+.score_box{
+   width: 100%;
+  height: 50%;
+   display: flex;
+}
+.fractions{
+  width: 70%;
+  height: 100%;
+}
+.back{
+  width: 15%;
+  height: 100%;
+}
+.left_point{
+  width: 22.5%;
+  height: 100%;
+}
+.fraction{
+  width: 25%;
+  height: 100%;
+}
+.right_point{
+  width: 22.5%;
+  height: 100%;
+}
+.save{
+  width: 15%;
+  height: 100%;
+}
+.bottom_box{
+   width: 100%;
+  height: 50%;
+   display: flex;
+   background: url(http://owkgytr8g.bkt.clouddn.com/image/jpg/yun.png)no-repeat;
+   background-size: 100% 100%;
+}
+.play{
+  width: 60rpx;
+  height: 60rpx;
+}
+.point{
+  width: 168rpx;
+  height: 62rpx;
+}
+.release{
+   width: 30%;
+  height: 100%;
+}
+.details{
+   width: 30%;
+  height: 100%;
+}
+.forwarding{
+   width: 30%;
+  height: 100%;
+}
+.big_point{
+   width: 5%;
+  height: 100%;
+}
+.Features{
+  width: 122rpx;
+  height: 122rpx;
+}
+.Feature{
+  width: 40rpx;
+  height: 40rpx;
+}
+.number{
+  color: #FFF;
+  font-size: 60rpx;
+  font-weight: 400;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.test{
+   color: #FFF;
+  font-size: 50rpx;
+  font-weight: 400;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

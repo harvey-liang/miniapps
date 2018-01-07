@@ -1,0 +1,16 @@
+<!--pages/function/MobileBinding/MobileBinding.wxml-->
+<view class='whole'>
+   <form bindsubmit="formSubmit" bindreset="formReset">
+
+  <view class="section flex">
+    <input name="mobile" placeholder="请输入您的手机号" bindblur="mobile" />
+  </view>
+  <view class="section flex">
+    <input name="code" placeholder="请输入验证码" />
+    <button class='Obtain' bindtap='Obtain'>{{text}}</button>
+  </view>
+  <view class="btn-area">
+    <button formType="submit">提交</button>
+  </view>
+</form>
+</view>
